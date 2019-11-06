@@ -18,7 +18,7 @@ YAML files:
 
 A working method is to fetch packages on the front-end nodes and then to install any packages possible on the front-end, while installing other packages as necessary on the back-end.
 
-:Note: I have cobbled together a working build like this, but not yet repeated from scratch.
+**Note:** I have cobbled together a working build like this, but not yet repeated from scratch.
 
 Python, NumPy and Setuptools were all built from an existing module (see packages.py). This prevents an issue where petsc4py cannot find numpy (dual numpy builds).
 
@@ -96,9 +96,8 @@ on the MOM nodes (Broadwell). PETSc is built also without hdf5, superlu or hypre
 the intention of using the TAO optimizers.
 
 In preparation:
-
-    Unload darshan (or it adds some KNL stuff)
-    Unload xalt
+* Unload darshan (or it adds some KNL stuff)
+* Unload xalt
 
 Re-build pretty much everything with -xAVX2 (Note: -xAVX2 will be appended on the end of
 compile flags, overriding the KNL flag -xMIC-AVX512)
@@ -107,9 +106,9 @@ Limitations specific to this build:
 * In py-petsc4py package.py. remove petsc+mpi dependency (replace with just petsc dependency).
 * Not all tests work - Some SciPy sub-packages fail on MOM nodes.
 
-Note: In the case of ^petsc cflags="-xAVX2" the cflags applies to ^petsc even though a space (not to all packages). So must be applied separately to different packages.
+Note: In the case of `^petsc cflags="-xAVX2"` the cflags applies to `^petsc` even though there is 
+a space (not to all packages). So this must be applied separately to different packages.
 
 Build on front-end or MOM nodes with:
+
     nohup spack install -j16 py-libensemble @0.5.2 +mpi +scipy +petsc4py +nlopt ^py-scipy cflags="-xAVX2" ^petsc~mpi~hdf5~hypre~superlu-dist cflags="-xAVX2" ^nlopt cflags="-xAVX2"&
-
-
