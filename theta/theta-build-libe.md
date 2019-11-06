@@ -37,6 +37,7 @@ Fetch from login nodes:
 * Environment setup tries to load modules from the wrong place (reported to Spack).
 * For the serial PETSc build (build 2 below), the py-petsc4py package.py had to remove petsc+mpi dependency (replace with just petsc dependency).
 * For the serial PETSc build (build 2 below), not all tests run on MOM node. Some SciPy sub-packages fail.
+* nlopt does not produce an nlopt.py file (meaning that nlopt cannot be used via python interface).
 
 
 ### Installing with Spack
@@ -119,3 +120,4 @@ Build on front-end or MOM nodes with:
 * Propose petsc4py does not depend on MPI/petsc+mpi, but just petsc. Is there a reason this is set.
 * Determine why SciPy fails on MOM node
 * Try re-build from scratch aiming to minimse back-end building required.
+* Determine how to create nlopt.py (note: it is created on other platforms).
