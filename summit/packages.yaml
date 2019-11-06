@@ -1,0 +1,31 @@
+# Currently using gcc rather than xl.
+packages:
+  #cmake:
+  #  modules:
+  #    cmake@3.15.2: cmake/3.15.2
+  #  buildable: False
+  gcc:
+    modules:
+      gcc@9.1.0: gcc/9.1.0
+    buildable: False
+  spectrum-mpi:
+    modules:
+      spectrum-mpi@10.3.0.1: spectrum-mpi/10.3.0.1-20190611
+    buildable: False
+  hdf5:
+    modules:
+      hdf5@1.10.3+hl+fortran: hdf5/1.10.3
+    buildable: False
+  python:
+    modules:
+      python@3.6: python/3.6.6-anaconda3-5.3.0
+    buildable: False
+  py-numpy:
+    modules:
+      py-numpy@1.14: python/3.6.6-anaconda3-5.3.0
+    buildable: False
+  py-setuptools:
+    modules:
+      py-setuptools@40: python/3.6.6-anaconda3-5.3.0
+    buildable: False
+
