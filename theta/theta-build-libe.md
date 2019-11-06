@@ -16,11 +16,11 @@ YAML files:
 
 ### Overview
 
-A working method is to fetch packages on the front-end nodes. The to install any packages possible on the front-end, while installing other packages as necessary on the back-end.
+A working method is to fetch packages on the front-end nodes and then to install any packages possible on the front-end, while installing other packages as necessary on the back-end.
 
-Note: I have cobbled together a working build like this, but not yet repeated from scratch.
+:Note: I have cobbled together a working build like this, but not yet repeated from scratch.
 
-Python, NumPy and setuptools were all built from an existing module (see packages.py). This prevents an issue where petsc4py cannot find numpy (dual numpy builds).
+Python, NumPy and Setuptools were all built from an existing module (see packages.py). This prevents an issue where petsc4py cannot find numpy (dual numpy builds).
 
 
 ### Fetching packages
