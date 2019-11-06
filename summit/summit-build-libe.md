@@ -7,7 +7,7 @@ Spack: Develop branch at commit:
 
 Compiler: gcc/9.1.0 - latest gcc available.
 
-packages.yaml: See summit_packages.yaml
+YAML files: See summit/packages.yaml
 
 
 Load these modules:
