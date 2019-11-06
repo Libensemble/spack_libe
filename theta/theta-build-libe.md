@@ -112,3 +112,10 @@ a space (not to all packages). So this must be applied separately to different p
 Build on front-end or MOM nodes with:
 
     nohup spack install -j16 py-libensemble @0.5.2 +mpi +scipy +petsc4py +nlopt ^py-scipy cflags="-xAVX2" ^petsc~mpi~hdf5~hypre~superlu-dist cflags="-xAVX2" ^nlopt cflags="-xAVX2"&
+
+### Actions
+
+* Environment setup tries to load modules from the wrong place (reported to Spack).
+* Propose petsc4py does not depend on MPI/petsc+mpi, but just petsc. Is there a reason this is set.
+* Determine why SciPy fails on MOM node
+* Try re-build from scratch aiming to minimse back-end building required.

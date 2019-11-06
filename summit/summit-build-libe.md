@@ -28,13 +28,12 @@ Once built load modules with:
 
 This will autoload dependent modules as required (Python cannot use RPATHS).
 
-However, for nlopt still need to find nlopt.py file (even though nlopt module is loaded):
+However, for nlopt still need to find `nlopt.py` file (even though nlopt module is loaded):
 
-export PYTHONPATH=$SPACK_ROOT/opt/spack/linux-rhel7-power9le/gcc-9.1.0/nlopt-2.5.0-oaelajewbink4t75xo55632xvt5u6khu/lib/python3.6/site-packages:$PYTHONPATH
+    export PYTHONPATH=$SPACK_ROOT/opt/spack/linux-rhel7-power9le/gcc-9.1.0/nlopt-2.5.0-oaelajewbink4t75xo55632xvt5u6khu/lib/python3.6/site-packages:$PYTHONPATH
 
 (Replacing nlopt-2.5.0-oaelajewbink4t75xo55632xvt5u6khu with your build directory).
 
-## Actions
+### Actions
 
-[*ACTION: Fix in nlopt package.py if possible or report this - check other systems - do they also fail to find nlopt.py - module nlopt
-does not add to PYTHONPATH]
+* nlopt does not add nlopt.py directory to PYTHONPATH. Fix in nlopt package.py if possible or report issue (also compare with other systems).
