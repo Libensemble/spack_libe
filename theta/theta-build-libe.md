@@ -6,7 +6,8 @@ Spack: Develop branch at commit:
     Author: Satish Balay <balay@mcs.anl.gov>
     Date:   Mon Oct 14 15:27:28 2019 -0500
 
-Compiler: intel@18.0.0
+Compilers:
+* intel@18.0.0
 
 YAML files:
 * packages.yaml

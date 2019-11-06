@@ -1,13 +1,16 @@
 ## Summit build of libEnsemble
 
 Spack: Develop branch at commit:
+
     commit 1114ae93752aa9d33c3520f72aa701d8105c09dd
     Author: Hadrien G <grasland@lal.in2p3.fr>
     Date:   Mon Nov 4 18:43:45 2019 +0100
 
-Compiler: gcc/9.1.0 - latest gcc available.
+Compilers:
+* gcc/9.1.0 (latest gcc available).
 
-YAML files: See summit/packages.yaml
+YAML files:
+* packages.yaml
 
 
 Load these modules:
