@@ -1,0 +1,6 @@
+modules:
+  tcl:
+    verbose: True
+    ^python:
+      autoload:  'direct'
+
