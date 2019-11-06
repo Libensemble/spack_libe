@@ -9,10 +9,9 @@ Spack: Develop branch at commit:
 Compiler: intel@18.0.0
 
 YAML files:
-
-    packages.yaml
-    config.yaml (prevent trying pull again from repo if building develop)
-    modules.yaml (Auto-load modules - may work without this is "spack load -r")
+* packages.yaml
+* config.yaml (prevent trying pull again from repo if building develop)
+* modules.yaml (Auto-load modules - may work without this is "spack load -r")
 
 ### Overview
 
