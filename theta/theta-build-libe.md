@@ -12,7 +12,7 @@ Compilers:
 YAML files:
 * packages.yaml
 * config.yaml (prevent trying pull again from repo if building develop)
-* modules.yaml (Auto-load modules - may work without this is "spack load -r")
+* modules.yaml (Auto-load modules - may work without this if use "spack load -r")
 
 ### Overview
 
@@ -32,7 +32,7 @@ Fetch from login nodes:
 
 ### Limitations and issues
 
-* PETSc could not build with hdf5 support for parallel knl petsc build (build option 1)
+* PETSc could not build with hdf5 support for parallel KNL PETSc build (build option 1)
 * PETSc had to be compiled with the line `options.append('--with-batch=1')` added to package.py to prevent mpiexec testing
 * Environment setup tries to load modules from the wrong place (reported to Spack).
 * For the serial PETSc build (build 2 below), the py-petsc4py package.py had to remove petsc+mpi dependency (replace with just petsc dependency).
