@@ -1,6 +1,7 @@
 ## Theta build of libEnsemble
 
 Spack: Develop branch at commit:
+
     commit a63e64f1c4f2f96d68daa1916ca77d4986b60cf1
     Author: Satish Balay <balay@mcs.anl.gov>
     Date:   Mon Oct 14 15:27:28 2019 -0500
