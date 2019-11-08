@@ -1,0 +1,44 @@
+packages:
+  cmake:
+    modules:
+      cmake@3.14.4: cmake/3.14.4
+    buildable: False  
+  swig:
+    modules:
+      swig@3.0.12: swig/3.0.12
+    buildable: False
+  mpich:
+    modules:
+      mpich@7.7.6: cray-mpich
+    buildable: False
+  intel-mkl:
+    paths:
+      intel-mkl@19.0.3.199: /opt/intel
+    buildable: False
+  python:
+    modules:
+      python@3.7: python/3.7-anaconda-2019.07
+    buildable: False      
+  py-numpy:
+    modules:
+      py-numpy@1.16.4: python/3.7-anaconda-2019.07
+    buildable: False
+  py-scipy:
+    modules:
+      py-scipy@1.3.0: python/3.7-anaconda-2019.07
+    buildable: False    
+  py-setuptools:
+    modules:
+      py-setuptools@41.0.1: python/3.7-anaconda-2019.07
+    buildable: False  
+  # petsc failed to configure with hdf5 option with this - so build with spack
+  #hdf5:
+    #modules:
+      #hdf5@1.10.2+hl+fortran: cray-hdf5-parallel/1.10.2.0
+    #buildable: False  
+  all:
+    providers:
+      mpi: [mpich]
+      blas: [intel-mkl]
+      lapack: [intel-mkl]
+    compiler: [intel/19.0.3.199]
