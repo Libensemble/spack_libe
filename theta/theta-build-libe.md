@@ -33,11 +33,11 @@ Fetch from login nodes:
 ### Limitations and issues
 
 * PETSc could not build with hdf5 support for parallel KNL PETSc build (build option 1)
-* PETSc had to be compiled with the line `options.append('--with-batch=1')` added to package.py to prevent mpiexec testing
+* PETSc had to be compiled with the line `options.append('--with-batch=1')` added to package.py to prevent mpiexec testing [*UPDATE*: balay/xsdk-0.5.0 branch use petsc+batch]
 * Environment setup tries to load modules from the wrong place (reported to Spack).
 * For the serial PETSc build (build 2 below), the py-petsc4py package.py had to remove petsc+mpi dependency (replace with just petsc dependency).
 * For the serial PETSc build (build 2 below), not all tests run on MOM node. Some SciPy sub-packages fail.
-* nlopt does not produce an nlopt.py file (meaning that nlopt cannot be used via python interface).
+* nlopt does not produce an nlopt.py file or corresponding _nlopt.so (meaning that nlopt cannot be used via python interface).
 
 
 ### Installing with Spack
@@ -120,4 +120,4 @@ Build on front-end or MOM nodes with:
 * Propose petsc4py does not depend on MPI/petsc+mpi, but just petsc. Is there a reason this is set.
 * Determine why SciPy fails on MOM node
 * Try re-build from scratch aiming to minimse back-end building required.
-* Determine how to create nlopt.py (note: it is created on other platforms).
+* Determine how to create nlopt.py/_nlopt.so (note: it is created on other platforms).
