@@ -35,4 +35,4 @@ However, for nlopt still need to find `nlopt.py` file (even though nlopt module 
 
 ### Actions
 
-* nlopt does not add nlopt.py directory to PYTHONPATH. Fix in nlopt package.py if possible or report issue (also compare with other systems).
+* nlopt does not add nlopt.py directory to PYTHONPATH. [Pull request #13688 opened 2019-11-11]
