@@ -1,0 +1,11 @@
+packages:
+  python:
+    externals:
+    - spec: python@3.9.4.1
+      modules:
+      - cray-python/3.9.4.1
+  py-numpy:
+    externals:
+    - spec: py-numpy@1.20.1
+      modules:
+      - cray-python/3.9.4.1
