@@ -38,17 +38,17 @@ Once built load modules with:
 
 Check getting Spack build libEnsemble:
 
-shudson@login2:spack$ python
-    Python 3.9.4 (default, Aug 16 2021, 21:41:42)
-    [GCC 9.3.0 20200312 (Cray Inc.)] on linux
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>> import libensemble
-    >>> libensemble.__path__
-    ['/autofs/nccs-svm1_home1/shudson/spock/spack/opt/spack/cray-sles15-zen2/gcc-11.2.0/py-libensemble-0.8.0-bjk36afkm6jiadncyvwzeqc2evxf2bso/lib/python3.9/site-packages/libensemble']
+    shudson@login2:spack$ python
+        Python 3.9.4 (default, Aug 16 2021, 21:41:42)
+        [GCC 9.3.0 20200312 (Cray Inc.)] on linux
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> import libensemble
+        >>> libensemble.__path__
+        ['/autofs/nccs-svm1_home1/shudson/spock/spack/opt/spack/cray-sles15-zen2/gcc-11.2.0/py-libensemble-0.8.0-bjk36afkm6jiadncyvwzeqc2evxf2bso/lib/python3.9/site-packages/libensemble']
 
 Run smoke test:
 
-    spack load -r py-libensemble
+    spack test run py-libensemble
 
     ==> Spack test t5oe2bk3bvjh237gz5y2i3prm42tn6ed
     ==> Testing package py-libensemble-0.8.0-bjk36af
