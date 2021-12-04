@@ -25,7 +25,7 @@ Load these modules:
 
     module load cray-python
 
-The module must be loaded so that /opt/cray/pe/gcc-libs is added to PATH (even if packages.yaml points to python/numpy).
+The module must be loaded so that `/opt/cray/pe/gcc-libs` is added to `LD_LIBRARY_PATH` (even if packages.yaml points to python/numpy).
 
 First I did simple build with minimal dependencies:
 
